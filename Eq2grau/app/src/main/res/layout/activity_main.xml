@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="evertonm.eq2grau.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="everton.messias@gmail.com"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="479dp" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Forma: Ax&#178; + Bx + C = 0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="29dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_toLeftOf="@+id/vc"
+        android:layout_toStartOf="@+id/vc"
+        android:text="Valor C:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="219dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_toLeftOf="@+id/vc"
+        android:layout_toStartOf="@+id/vc"
+        android:text="Valor B:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <EditText
+        android:id="@+id/vb"
+        android:layout_width="80"
+        android:layout_height="40dp"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_toLeftOf="@+id/vc"
+        android:layout_toStartOf="@+id/vc"
+        android:text="Valor A:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="99dp" />
+
+    <EditText
+        android:id="@+id/va"
+        android:layout_width="80"
+        android:layout_height="40dp"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="89dp" />
+
+    <TextView
+        android:id="@+id/resposta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/botao2"
+        android:layout_centerHorizontal="true"
+        android:text="Respostas:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="372dp" />
+
+    <TextView
+        android:id="@+id/raiz2"
+        android:layout_width="80"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/botao2"
+        android:layout_centerHorizontal="true"
+        android:text="Raiz2 .. "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:layout_editor_absoluteX="241dp"
+        tools:layout_editor_absoluteY="423dp" />
+
+    <TextView
+        android:id="@+id/raiz1"
+        android:layout_width="80"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/botao2"
+        android:layout_centerHorizontal="true"
+        android:text="Raiz1 .. "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="423dp" />
+
+    <TextView
+        android:id="@+id/delta"
+        android:layout_width="80"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/botao2"
+        android:layout_centerHorizontal="true"
+        android:text="Delta .. "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="423dp" />
+
+    <EditText
+        android:id="@+id/vc"
+        android:layout_width="80"
+        android:layout_height="40dp"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <Button
+        android:id="@+id/botao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:onClick="clique2"
+        android:text="APAGAR"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="291dp" />
+
+    <Button
+        android:id="@+id/botao1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:onClick="clique1"
+        android:text="CALCULAR"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="291dp" />
+
+</android.support.constraint.ConstraintLayout>
