@@ -54,7 +54,7 @@
 
     <EditText
         android:id="@+id/vb"
-        android:layout_width="80"
+        android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_above="@+id/textView2"
         android:layout_alignLeft="@+id/textView"
@@ -78,7 +78,7 @@
 
     <EditText
         android:id="@+id/va"
-        android:layout_width="80"
+        android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_above="@+id/textView2"
         android:layout_alignLeft="@+id/textView"
@@ -101,7 +101,7 @@
 
     <TextView
         android:id="@+id/raiz2"
-        android:layout_width="80"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/botao2"
         android:layout_centerHorizontal="true"
@@ -112,7 +112,7 @@
 
     <TextView
         android:id="@+id/raiz1"
-        android:layout_width="80"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/botao2"
         android:layout_centerHorizontal="true"
@@ -123,7 +123,7 @@
 
     <TextView
         android:id="@+id/delta"
-        android:layout_width="80"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/botao2"
         android:layout_centerHorizontal="true"
@@ -134,7 +134,7 @@
 
     <EditText
         android:id="@+id/vc"
-        android:layout_width="80"
+        android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_above="@+id/textView2"
         android:layout_alignLeft="@+id/textView"
