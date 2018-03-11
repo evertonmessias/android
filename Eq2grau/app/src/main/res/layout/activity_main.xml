@@ -14,8 +14,8 @@
         android:layout_centerHorizontal="true"
         android:text="everton.messias@gmail.com"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="479dp" />
+        tools:layout_editor_absoluteX="114px"
+        tools:layout_editor_absoluteY="479px" />
 
     <TextView
         android:id="@+id/titulo"
@@ -25,8 +25,8 @@
         android:layout_centerHorizontal="true"
         android:text="Forma: Ax&#178; + Bx + C = 0"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="29dp" />
+        tools:layout_editor_absoluteX="85px"
+        tools:layout_editor_absoluteY="29px" />
 
     <TextView
         android:id="@+id/textView1"
@@ -37,8 +37,8 @@
         android:layout_toStartOf="@+id/vc"
         android:text="Valor C:"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="219dp" />
+        tools:layout_editor_absoluteX="112px"
+        tools:layout_editor_absoluteY="219px" />
 
     <TextView
         android:id="@+id/textView6"
@@ -49,20 +49,20 @@
         android:layout_toStartOf="@+id/vc"
         android:text="Valor B:"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="160dp" />
+        tools:layout_editor_absoluteX="112px"
+        tools:layout_editor_absoluteY="160px" />
 
     <EditText
         android:id="@+id/vb"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
+        android:layout_width="80px"
+        android:layout_height="40px"
         android:layout_above="@+id/textView2"
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView"
         android:ems="10"
         android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="150dp" />
+        tools:layout_editor_absoluteX="202px"
+        tools:layout_editor_absoluteY="150px" />
 
     <TextView
         android:id="@+id/textView5"
@@ -73,20 +73,20 @@
         android:layout_toStartOf="@+id/vc"
         android:text="Valor A:"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="99dp" />
+        tools:layout_editor_absoluteX="112px"
+        tools:layout_editor_absoluteY="99px" />
 
     <EditText
         android:id="@+id/va"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
+        android:layout_width="80px"
+        android:layout_height="40px"
         android:layout_above="@+id/textView2"
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView"
         android:ems="10"
         android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="89dp" />
+        tools:layout_editor_absoluteX="202px"
+        tools:layout_editor_absoluteY="89px" />
 
     <TextView
         android:id="@+id/resposta"
@@ -96,53 +96,53 @@
         android:layout_centerHorizontal="true"
         android:text="Respostas:"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="372dp" />
+        tools:layout_editor_absoluteX="138px"
+        tools:layout_editor_absoluteY="372px" />
 
     <TextView
         android:id="@+id/raiz2"
-        android:layout_width="80dp"
+        android:layout_width="80px"
         android:layout_height="wrap_content"
         android:layout_below="@+id/botao2"
         android:layout_centerHorizontal="true"
         android:text="Raiz2 .. "
         android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:layout_editor_absoluteX="241dp"
-        tools:layout_editor_absoluteY="423dp" />
+        tools:layout_editor_absoluteX="241px"
+        tools:layout_editor_absoluteY="423px" />
 
     <TextView
         android:id="@+id/raiz1"
-        android:layout_width="80dp"
+        android:layout_width="80px"
         android:layout_height="wrap_content"
         android:layout_below="@+id/botao2"
         android:layout_centerHorizontal="true"
         android:text="Raiz1 .. "
         android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="423dp" />
+        tools:layout_editor_absoluteX="152px"
+        tools:layout_editor_absoluteY="423px" />
 
     <TextView
         android:id="@+id/delta"
-        android:layout_width="80dp"
+        android:layout_width="80px"
         android:layout_height="wrap_content"
         android:layout_below="@+id/botao2"
         android:layout_centerHorizontal="true"
         android:text="Delta .. "
         android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="423dp" />
+        tools:layout_editor_absoluteX="63px"
+        tools:layout_editor_absoluteY="423px" />
 
     <EditText
         android:id="@+id/vc"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
+        android:layout_width="80px"
+        android:layout_height="40px"
         android:layout_above="@+id/textView2"
         android:layout_alignLeft="@+id/textView"
         android:layout_alignStart="@+id/textView"
         android:ems="10"
         android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="209dp" />
+        tools:layout_editor_absoluteX="202px"
+        tools:layout_editor_absoluteY="209px" />
 
     <Button
         android:id="@+id/botao2"
@@ -152,8 +152,8 @@
         android:layout_centerHorizontal="true"
         android:onClick="clique2"
         android:text="APAGAR"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="291dp" />
+        tools:layout_editor_absoluteX="202px"
+        tools:layout_editor_absoluteY="291px" />
 
     <Button
         android:id="@+id/botao1"
@@ -163,7 +163,7 @@
         android:layout_centerHorizontal="true"
         android:onClick="clique1"
         android:text="CALCULAR"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="291dp" />
+        tools:layout_editor_absoluteX="95px"
+        tools:layout_editor_absoluteY="291px" />
 
 </android.support.constraint.ConstraintLayout>
