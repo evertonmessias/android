@@ -69,22 +69,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // tipo variavel = (typecast) metodo de captura
-    EditText va = findViewById(R.id.va);
-    EditText vb = findViewById(R.id.vb);
-    EditText vc = findViewById(R.id.vc);
-    TextView resposta = findViewById(R.id.resposta);
-    TextView delta = findViewById(R.id.delta);
-    TextView raiz1 = findViewById(R.id.raiz1);
-    TextView raiz2 = findViewById(R.id.raiz2);
-
     // ------------------------------BOTÕES-----------------------------------------
 
     public void clique1(View view) {
 
-        String a = va.toString();
-        String b = vb.toString();
-        String c = vc.toString();
+        // tipo variavel = (typecast) metodo de captura
+        EditText va = findViewById(R.id.va);
+        EditText vb = findViewById(R.id.vb);
+        EditText vc = findViewById(R.id.vc);
+        TextView resposta = findViewById(R.id.resposta);
+        TextView delta = findViewById(R.id.delta);
+        TextView raiz1 = findViewById(R.id.raiz1);
+        TextView raiz2 = findViewById(R.id.raiz2);
+
+        String a = va.toString();String b = vb.toString();String c = vc.toString();
 
         if ("".equals(a) || "".equals(b) || "".equals(c) || !isNumeric(a) || !isNumeric(b) || !isNumeric(c)) {
             resposta.setText("Digite os Valores Numéricos!");
@@ -104,6 +102,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clique2(View view) {
+
+        // tipo variavel = (typecast) metodo de captura
+        EditText va = findViewById(R.id.va);
+        EditText vb = findViewById(R.id.vb);
+        EditText vc = findViewById(R.id.vc);
+        TextView resposta = findViewById(R.id.resposta);
+        TextView delta = findViewById(R.id.delta);
+        TextView raiz1 = findViewById(R.id.raiz1);
+        TextView raiz2 = findViewById(R.id.raiz2);
+
         va.setText("");
         vb.setText("");
         vc.setText("");
