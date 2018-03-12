@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
+import static java.lang.String.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     String escrever() {
         String eq, a, b, c;
-        a = String.format("%.1f", valorA);
-        b = String.format("%.1f", valorB);
-        c = String.format("%.1f", valorC);
+        a = format("%.1f", valorA);
+        b = format("%.1f", valorB);
+        c = format("%.1f", valorC);
         if (valorB < 0 && valorC < 0) {
             eq = a + "x" + q + " " + b + "x " + c + " = 0";
         } else if (valorB >= 0 && valorC < 0) {
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             case 0:
                 return "Valor 'A' não pode ser Zero!";
             case 1:
-                return "Não Existe Raizes Reais!";
+                return "Não Existem Raizes Reais!";
             default:
                 return escrever();
         }
@@ -78,26 +79,26 @@ public class MainActivity extends AppCompatActivity {
         EditText vb = findViewById(R.id.vb);
         EditText vc = findViewById(R.id.vc);
         TextView resposta = findViewById(R.id.resposta);
-        TextView delta = findViewById(R.id.delta);
-        TextView raiz1 = findViewById(R.id.raiz1);
-        TextView raiz2 = findViewById(R.id.raiz2);
+        TextView valores = findViewById(R.id.valores);
 
-        String a = va.toString();String b = vb.toString();String c = vc.toString();
+        if (va.getText().length() > 0 && vb.getText().length() > 0 && vc.getText().length() > 0) {
 
-        if ("".equals(a) || "".equals(b) || "".equals(c) || !isNumeric(a) || !isNumeric(b) || !isNumeric(c)) {
-            resposta.setText("Digite os Valores Numéricos!");
-        } else {
-            valorA = Float.parseFloat(a);
-            valorB = Float.parseFloat(b);
-            valorC = Float.parseFloat(c);
+            String a = va.getText().toString();
+            String b = vb.getText().toString();
+            String c = vc.getText().toString();
+
+            valorA = Float.valueOf(a);
+            valorB = Float.valueOf(b);
+            valorC = Float.valueOf(c);
+
             op = (int) calcular()[3];
             resposta.setText(resposta(op));
-            String de = String.format("%.2f", calcular()[0]);
-            String r1 = String.format("%.2f", calcular()[1]);
-            String r2 = String.format("%.2f", calcular()[2]);
-            delta.setText("dt = " + de);
-            raiz1.setText("x1 = " + r1);
-            raiz2.setText("x2 = " + r2);
+            String de = format("%.1f", calcular()[0]);
+            String r1 = format("%.1f", calcular()[1]);
+            String r2 = format("%.1f", calcular()[2]);
+            valores.setText("delta = " + de +"  |  x1 = " + r1 + "  |  x2 = " + r2);
+        } else {
+            resposta.setText("Digite os Valores!");
         }
     }
 
@@ -108,27 +109,13 @@ public class MainActivity extends AppCompatActivity {
         EditText vb = findViewById(R.id.vb);
         EditText vc = findViewById(R.id.vc);
         TextView resposta = findViewById(R.id.resposta);
-        TextView delta = findViewById(R.id.delta);
-        TextView raiz1 = findViewById(R.id.raiz1);
-        TextView raiz2 = findViewById(R.id.raiz2);
+        TextView valores = findViewById(R.id.valores);
 
         va.setText("");
         vb.setText("");
         vc.setText("");
         resposta.setText("Resposta:");
-        delta.setText("Delta");
-        raiz1.setText("Raiz1");
-        raiz2.setText("Raiz2");
-    }
-
-
-    private boolean isNumeric(String s) {
-        try {
-            Float.parseFloat(s);
-        } catch (NumberFormatException ex) {
-            return false;
-        }
-        return true;
+        valores.setText("delta = 0  |  x1 = 0  |  x2 = 0");
     }
 
     @Override
