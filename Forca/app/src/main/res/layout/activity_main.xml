@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tela"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="m.everton.forca.MainActivity">
+
+    <TextView
+        android:id="@+id/avisos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite uma Letra"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/forca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <ImageView
+        android:id="@+id/forca"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:clickable="false"
+        android:src="@drawable/forca0"
+        app:layout_constraintBottom_toTopOf="@+id/letra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avisos" />
+
+   <EditText
+        android:id="@+id/letra"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="A"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/clique"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/forca"
+       app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/clique"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:onClick="clique"
+        android:text="OK"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/repetidos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/letra"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <TextView
+        android:id="@+id/repetidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Letras repetidas:"
+        android:textAlignment="center"
+        android:textColor="#ff0040"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clique" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Everton M. | everton.messias@gmail.com"
+        android:textAlignment="center"
+        android:textColor="#aaa"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repetidos"
+        app:layout_constraintVertical_bias="0.964" />
+
+</android.support.constraint.ConstraintLayout>
