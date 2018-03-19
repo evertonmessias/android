@@ -11,7 +11,7 @@
     <Button
         android:id="@+id/clique2"
         android:layout_width="60dp"
-        android:layout_height="30dp"
+        android:layout_height="35dp"
         android:onClick="clique2"
         android:text="iniciar"
         android:textSize="10sp"
