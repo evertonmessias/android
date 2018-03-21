@@ -1,6 +1,7 @@
 package everton.m.forca;
 
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,10 +15,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static everton.m.forca.R.*;
 
 public class MainActivity extends AppCompatActivity {
 
-    String palavra, scoringa, aleatorio[];
+    String palavra, dika, scoringa;
     char coringa[] ,repetido[], apalavra[], caracter;
     int xx, ii, acum, jogada , figura, chances, sorteio;
     int acompletar;
@@ -27,56 +29,65 @@ public class MainActivity extends AppCompatActivity {
     TextView avisos, msg, dica, palavras;
     ImageView forca;
     Button a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
+    MediaPlayer somacerto, somerro, somganha, somperde, somin, somout;
 
     public void sortear(){
-        aleatorio = new String[]{"prato", "liquidificador", "geladeira", "arroz", "batedeira", "microondas", "colher", "frigideira", "detergente", "escorredor"};
-        sorteio = (int)(Math.random() * 10);
-        palavra = aleatorio[sorteio];
+        BancoDados aleatorio = new BancoDados();
+        sorteio = (int)(Math.random() * 100);
+
+        palavra = aleatorio.matriz[sorteio][0];
+        dika = aleatorio.matriz[sorteio][1];
     }
 
     public void componentes(){
-        avisos = findViewById(R.id.avisos);
-        msg = findViewById(R.id.msg);
-        dica = findViewById(R.id.dica);
-        palavras = findViewById(R.id.palavras);
-        forca = findViewById(R.id.forca);
-        a = findViewById(R.id.a);
-        b = findViewById(R.id.b);
-        c = findViewById(R.id.c);
-        d = findViewById(R.id.d);
-        e = findViewById(R.id.e);
-        f = findViewById(R.id.f);
-        g = findViewById(R.id.g);
-        h = findViewById(R.id.h);
-        i = findViewById(R.id.i);
-        j = findViewById(R.id.j);
-        k = findViewById(R.id.k);
-        l = findViewById(R.id.l);
-        m = findViewById(R.id.m);
-        n = findViewById(R.id.n);
-        o = findViewById(R.id.o);
-        p = findViewById(R.id.p);
-        q = findViewById(R.id.q);
-        r = findViewById(R.id.r);
-        s = findViewById(R.id.s);
-        t = findViewById(R.id.t);
-        u = findViewById(R.id.u);
-        v = findViewById(R.id.v);
-        w = findViewById(R.id.w);
-        x = findViewById(R.id.x);
-        y = findViewById(R.id.y);
-        z = findViewById(R.id.z);
+        somacerto = MediaPlayer.create(this, R.raw.acerto);
+        somerro = MediaPlayer.create(this, R.raw.erro);  //.start() .playSound()
+        somin = MediaPlayer.create(this, raw.inicio);
+        somout = MediaPlayer.create(this, raw.fim);
+        somganha = MediaPlayer.create(this, raw.ganhou);
+        somperde = MediaPlayer.create(this, raw.perdeu);
+        avisos = findViewById(id.avisos);
+        msg = findViewById(id.msg);
+        dica = findViewById(id.dica);
+        palavras = findViewById(id.palavras);
+        forca = findViewById(id.forca);
+        a = findViewById(id.a);
+        b = findViewById(id.b);
+        c = findViewById(id.c);
+        d = findViewById(id.d);
+        e = findViewById(id.e);
+        f = findViewById(id.f);
+        g = findViewById(id.g);
+        h = findViewById(id.h);
+        i = findViewById(id.i);
+        j = findViewById(id.j);
+        k = findViewById(id.k);
+        l = findViewById(id.l);
+        m = findViewById(id.m);
+        n = findViewById(id.n);
+        o = findViewById(id.o);
+        p = findViewById(id.p);
+        q = findViewById(id.q);
+        r = findViewById(id.r);
+        s = findViewById(id.s);
+        t = findViewById(id.t);
+        u = findViewById(id.u);
+        v = findViewById(id.v);
+        w = findViewById(id.w);
+        x = findViewById(id.x);
+        y = findViewById(id.y);
+        z = findViewById(id.z);
     }
 
     public void figuras(){
-        forca0 = getResources().getDrawable(R.drawable.forca0);
-        forca1 = getResources().getDrawable(R.drawable.forca1);
-        forca2 = getResources().getDrawable(R.drawable.forca2);
-        forca3 = getResources().getDrawable(R.drawable.forca3);
-        forca4 = getResources().getDrawable(R.drawable.forca4);
-        forca5 = getResources().getDrawable(R.drawable.forca5);
-        forca6 = getResources().getDrawable(R.drawable.forca6);
-        forca7 = getResources().getDrawable(R.drawable.forca7);
+        forca0 = getResources().getDrawable(drawable.forca0);
+        forca1 = getResources().getDrawable(drawable.forca1);
+        forca2 = getResources().getDrawable(drawable.forca2);
+        forca3 = getResources().getDrawable(drawable.forca3);
+        forca4 = getResources().getDrawable(drawable.forca4);
+        forca5 = getResources().getDrawable(drawable.forca5);
+        forca6 = getResources().getDrawable(drawable.forca6);
+        forca7 = getResources().getDrawable(drawable.forca7);
     }
 
     public void mudacor(){
@@ -135,12 +146,12 @@ public class MainActivity extends AppCompatActivity {
 
         if(acerto == true){
             avisos.setText("Jogada "+ (jogada+1) +"  ,  Letra  [ "+letra+" ]  ,  Chance "+chances+"/6");
-            msg.setTextColor(Color.rgb(0,255,0));
+            msg.setTextColor(Color.rgb(0,255,0));somacerto.start();
             msg.setText("**** ACERTOU ****");
             acompletar=acompletar-acum;}
         else {chances--;
               avisos.setText("Jogada "+ (jogada+1) +"  ,  Letra  [ "+letra+" ]  ,  Chance "+chances+"/6");
-              msg.setTextColor(Color.rgb(255,0,0));
+              msg.setTextColor(Color.rgb(255,0,0));somerro.start();
               msg.setText("- - ERROU - -");figura++;
             switch (figura){
                 case 1:
@@ -170,10 +181,10 @@ public class MainActivity extends AppCompatActivity {
                 palavras.setText(scoringa);
             }
             if (acompletar <= 0) {msg.setTextColor(Color.rgb(0,0,255));
-                msg.setText("*** V E N C E U ***");
+                msg.setText("*** V E N C E U ***");somganha.start();
                 forca.setImageDrawable(forca7);}
             else if (chances <= 0){msg.setTextColor(Color.rgb(255,0,0));
-                msg.setText("*F I M   D O   J O G O*");
+                msg.setText("*F I M   D O   J O G O*");somperde.start();
                 dica.setText(palavra);
             }
         }
@@ -268,7 +279,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void iniciar() {
         componentes();figuras();mudacor();sortear();
-
+        somin.start();
         iniciado = true;
         jogada = 0;
         figura = 0;
@@ -286,7 +297,7 @@ public class MainActivity extends AppCompatActivity {
         avisos.setText("Digite um Letra,   Chances: 6");
         msg.setTextColor(Color.rgb(0,255,0));
         msg.setText("Boa Sorte!");
-        dica.setText("Dica: Tem na cozinha com "+ii+" letras");
+        dica.setText("Dica: "+dika+", com "+ii+" letras");
 
         coringa = palavra.toCharArray();
         apalavra = palavra.toCharArray();
@@ -301,11 +312,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setContentView(layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -335,6 +346,7 @@ public class MainActivity extends AppCompatActivity {
         }
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            somout.start();
             finish();
             return true;
         }
