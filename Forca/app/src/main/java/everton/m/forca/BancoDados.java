@@ -6,7 +6,7 @@ public class BancoDados {
 {"geladeira","Tem na cozinha"},
 {"arroz","Tem na cozinha"},
 {"batedeira","Tem na cozinha"},
-{"micro-ondas","Tem na cozinha"},
+{"microondas","Tem na cozinha"},
 {"colher","Tem na cozinha"},
 {"frigideira","Tem na cozinha"},
 {"detergente","Tem na cozinha"},
