@@ -40,12 +40,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void componentes(){
-        somacerto = MediaPlayer.create(this, R.raw.acerto);
-        somerro = MediaPlayer.create(this, R.raw.erro);  //.start() .playSound()
-        somin = MediaPlayer.create(this, raw.inicio);
-        somout = MediaPlayer.create(this, raw.fim);
-        somganha = MediaPlayer.create(this, raw.ganhou);
-        somperde = MediaPlayer.create(this, raw.perdeu);
         avisos = findViewById(id.avisos);
         msg = findViewById(id.msg);
         dica = findViewById(id.dica);
@@ -77,6 +71,15 @@ public class MainActivity extends AppCompatActivity {
         x = findViewById(id.x);
         y = findViewById(id.y);
         z = findViewById(id.z);
+    }
+
+    public void som(){
+        somacerto = MediaPlayer.create(this, R.raw.acerto);
+        somerro = MediaPlayer.create(this, R.raw.erro);
+        somin = MediaPlayer.create(this, raw.inicio);
+        somout = MediaPlayer.create(this, raw.fim);
+        somganha = MediaPlayer.create(this, raw.ganhou);
+        somperde = MediaPlayer.create(this, raw.perdeu);
     }
 
     public void figuras(){
@@ -130,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void jogar(char letra){
-        componentes();figuras();
 
         if(iniciado == true){
 
@@ -190,95 +192,97 @@ public class MainActivity extends AppCompatActivity {
         }
 
         }
-        else {msg.setTextColor(Color.rgb(255,0,0));
-            msg.setText("INICIE O JOGO NO MENU ACIMA");}
+        else {msg = findViewById(id.msg);
+        msg.setTextColor(Color.rgb(255,0,0));
+            msg.setText("INICIE O JOGO NO MENU :");}
     }
 
     // ------------------------------TECLADO-----------------------------------------
 
     public void a(View view) {
-        jogar('a');a.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('a');if(iniciado == true){a.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void b(View view) {
-        jogar('b');b.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('b');if(iniciado == true){b.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void c(View view) {
-        jogar('c');c.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('c');if(iniciado == true){c.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void d(View view) {
-        jogar('d');d.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('d');if(iniciado == true){d.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void e(View view) {
-        jogar('e');e.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('e');if(iniciado == true){e.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void f(View view) {
-        jogar('f');f.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('f');if(iniciado == true){f.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void g(View view) {
-        jogar('g');g.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('g');if(iniciado == true){g.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void h(View view) {
-        jogar('h');h.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('h');if(iniciado == true){h.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void i(View view) {
-        jogar('i');i.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('i');if(iniciado == true){i.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void j(View view) {
-        jogar('j');j.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('j');if(iniciado == true){j.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void k(View view) {
-        jogar('k');k.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('k');if(iniciado == true){k.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void l(View view) {
-        jogar('l');l.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('l');if(iniciado == true){l.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void m(View view) {
-        jogar('m');m.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('m');if(iniciado == true){m.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void n(View view) {
-        jogar('n');n.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('n');if(iniciado == true){n.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void o(View view) {
-        jogar('o');o.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('o');if(iniciado == true){o.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void p(View view) {
-        jogar('p');p.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('p');if(iniciado == true){p.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void q(View view) {
-        jogar('q');q.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('q');if(iniciado == true){q.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void r(View view) {
-        jogar('r');r.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('r');if(iniciado == true){r.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void s(View view) {
-        jogar('s');s.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('s');if(iniciado == true){s.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void t(View view) {
-        jogar('t');t.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('t');if(iniciado == true){t.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void u(View view) {
-        jogar('u');u.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('u');if(iniciado == true){u.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void v(View view) {
-        jogar('v');v.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('v');if(iniciado == true){v.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void w(View view) {
-        jogar('w');w.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('w');if(iniciado == true){w.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void x(View view) {
-        jogar('x');x.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('x');if(iniciado == true){x.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void y(View view) {
-        jogar('y');y.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('y');if(iniciado == true){y.setBackgroundColor(Color.rgb(255,0,0));}}
 
     public void z(View view) {
-        jogar('z');z.setBackgroundColor(Color.rgb(255,0,0));}
+        jogar('z');if(iniciado == true){z.setBackgroundColor(Color.rgb(255,0,0));}}
 
 
     // ------------------------------INICIO-----------------------------------------
 
     public void iniciar() {
-        componentes();figuras();mudacor();sortear();
+        onRestart();
+        componentes();som();figuras();mudacor();sortear();
         somin.start();
         iniciado = true;
         jogada = 0;
