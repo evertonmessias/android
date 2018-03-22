@@ -294,7 +294,7 @@ public class MainActivity extends AppCompatActivity {
 
         acompletar = ii;
 
-        avisos.setText("Digite um Letra,   Chances: 6");
+        avisos.setText("Digite uma Letra,   Chances: 6");
         msg.setTextColor(Color.rgb(0,255,0));
         msg.setText("Boa Sorte!");
         dica.setText("Dica: "+dika+", com "+ii+" letras");
