@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         z = findViewById(id.z);
     }
 
-    public void som(){
+    public void som() {
         somacerto = MediaPlayer.create(this, R.raw.acerto);
         somerro = MediaPlayer.create(this, R.raw.erro);
         somin = MediaPlayer.create(this, raw.inicio);
@@ -87,8 +87,6 @@ public class MainActivity extends AppCompatActivity {
         somerro.release();
         somin.release();
         somout.release();
-        somganha.release();
-        somperde.release();
     }
 
     public void figuras(){
@@ -222,7 +220,8 @@ public class MainActivity extends AppCompatActivity {
             }
             if (acompletar <= 0) {msg.setTextColor(Color.rgb(0,0,255));
                 msg.setText("*** V E N C E U ***");somganha.start();
-                forca.setImageDrawable(forca7);ativadesativabtn(false);resetsom();}
+                forca.setImageDrawable(forca7);ativadesativabtn(false);resetsom();
+            }
             else if (chances <= 0){msg.setTextColor(Color.rgb(255,0,0));
                 msg.setText("*F I M   D O   J O G O*");somperde.start();
                 dica.setText(palavra);ativadesativabtn(false);resetsom();
