@@ -26,7 +26,7 @@ public class BancoDados {
 {"papel","Tem no supermercado"},
 {"escova","Tem no supermercado"},
 {"iogurte","Tem no supermercado"},
-{"café","Tem no supermercado"},
+{"cafe","Tem no supermercado"},
 {"feijao","Tem no supermercado"},
 {"cebola","Tem no supermercado"},
 {"tomate","Tem no supermercado"},
