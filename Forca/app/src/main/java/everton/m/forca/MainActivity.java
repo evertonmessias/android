@@ -319,7 +319,7 @@ public class MainActivity extends AppCompatActivity {
     // ------------------------------INICIO-----------------------------------------
 
     public void iniciar() {
-        onRestart();resetsom();
+        onRestart();
         componentes();som();figuras();mudacor();sortear();ativadesativabtn(true);
         somin.start();
         iniciado = true;
