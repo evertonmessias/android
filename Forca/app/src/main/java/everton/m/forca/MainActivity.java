@@ -82,6 +82,15 @@ public class MainActivity extends AppCompatActivity {
         somperde = MediaPlayer.create(this, raw.perdeu);
     }
 
+    public void resetsom(){
+        somacerto.release();
+        somerro.release();
+        somin.release();
+        somout.release();
+        somganha.release();
+        somperde.release();
+    }
+
     public void figuras(){
         forca0 = getResources().getDrawable(drawable.forca0);
         forca1 = getResources().getDrawable(drawable.forca1);
@@ -120,6 +129,35 @@ public class MainActivity extends AppCompatActivity {
         x.setBackgroundColor(Color.rgb(204,204,204));
         y.setBackgroundColor(Color.rgb(204,204,204));
         z.setBackgroundColor(Color.rgb(204,204,204));
+    }
+
+    public void ativadesativabtn(boolean estado){
+        a.setClickable(estado);
+        b.setClickable(estado);
+        c.setClickable(estado);
+        d.setClickable(estado);
+        e.setClickable(estado);
+        f.setClickable(estado);
+        g.setClickable(estado);
+        h.setClickable(estado);
+        i.setClickable(estado);
+        j.setClickable(estado);
+        k.setClickable(estado);
+        l.setClickable(estado);
+        m.setClickable(estado);
+        n.setClickable(estado);
+        o.setClickable(estado);
+        p.setClickable(estado);
+        q.setClickable(estado);
+        r.setClickable(estado);
+        s.setClickable(estado);
+        t.setClickable(estado);
+        u.setClickable(estado);
+        v.setClickable(estado);
+        w.setClickable(estado);
+        x.setClickable(estado);
+        y.setClickable(estado);
+        z.setClickable(estado);
     }
 
     public void busca(char letra){
@@ -184,10 +222,10 @@ public class MainActivity extends AppCompatActivity {
             }
             if (acompletar <= 0) {msg.setTextColor(Color.rgb(0,0,255));
                 msg.setText("*** V E N C E U ***");somganha.start();
-                forca.setImageDrawable(forca7);}
+                forca.setImageDrawable(forca7);ativadesativabtn(false);resetsom();}
             else if (chances <= 0){msg.setTextColor(Color.rgb(255,0,0));
                 msg.setText("*F I M   D O   J O G O*");somperde.start();
-                dica.setText(palavra);
+                dica.setText(palavra);ativadesativabtn(false);resetsom();
             }
         }
 
@@ -281,8 +319,8 @@ public class MainActivity extends AppCompatActivity {
     // ------------------------------INICIO-----------------------------------------
 
     public void iniciar() {
-        onRestart();
-        componentes();som();figuras();mudacor();sortear();
+        onRestart();resetsom();
+        componentes();som();figuras();mudacor();sortear();ativadesativabtn(true);
         somin.start();
         iniciado = true;
         jogada = 0;
