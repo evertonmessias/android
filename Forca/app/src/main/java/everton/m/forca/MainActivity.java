@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
     char coringa[] ,repetido[], apalavra[], caracter;
     int xx, ii, acum, jogada , figura, chances, sorteio;
     int acompletar;
-    boolean acerto, ok, iniciado=false;
+    boolean acerto, ok, iniciado=false, comsom=true;
 
     Drawable forca0, forca1, forca2, forca3, forca4,forca5, forca6, forca7;
     TextView avisos, msg, dica, palavras;
     ImageView forca;
     Button a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
-    MediaPlayer somacerto, somerro, somganha, somperde, somin, somout;
+    MediaPlayer somacerto, somerro, somganha, somperde, somin;
 
     public void sortear(){
         BancoDados aleatorio = new BancoDados();
@@ -77,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
         somacerto = MediaPlayer.create(this, R.raw.acerto);
         somerro = MediaPlayer.create(this, R.raw.erro);
         somin = MediaPlayer.create(this, raw.inicio);
-        somout = MediaPlayer.create(this, raw.fim);
         somganha = MediaPlayer.create(this, raw.ganhou);
         somperde = MediaPlayer.create(this, raw.perdeu);
     }
@@ -86,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
         somacerto.release();
         somerro.release();
         somin.release();
-        somout.release();
     }
 
     public void figuras(){
@@ -184,12 +182,12 @@ public class MainActivity extends AppCompatActivity {
 
         if(acerto == true){
             avisos.setText("Jogada "+ (jogada+1) +"  ,  Letra  [ "+letra+" ]  ,  Chance "+chances+"/6");
-            msg.setTextColor(Color.rgb(0,255,0));somacerto.start();
+            msg.setTextColor(Color.rgb(0,255,0));if (comsom){somacerto.start();}
             msg.setText("**** ACERTOU ****");
             acompletar=acompletar-acum;}
         else {chances--;
               avisos.setText("Jogada "+ (jogada+1) +"  ,  Letra  [ "+letra+" ]  ,  Chance "+chances+"/6");
-              msg.setTextColor(Color.rgb(255,0,0));somerro.start();
+              msg.setTextColor(Color.rgb(255,0,0));if (comsom){somerro.start();}
               msg.setText("- - ERROU - -");figura++;
             switch (figura){
                 case 1:
@@ -219,12 +217,12 @@ public class MainActivity extends AppCompatActivity {
                 palavras.setText(scoringa);
             }
             if (acompletar <= 0) {msg.setTextColor(Color.rgb(0,0,255));
-                msg.setText("*** V E N C E U ***");somganha.start();
-                forca.setImageDrawable(forca7);ativadesativabtn(false);resetsom();
+                msg.setText("*** V E N C E U ***");if (comsom){somganha.start();resetsom();}
+                forca.setImageDrawable(forca7);ativadesativabtn(false);
             }
             else if (chances <= 0){msg.setTextColor(Color.rgb(255,0,0));
-                msg.setText("*F I M   D O   J O G O*");somperde.start();
-                dica.setText(palavra);ativadesativabtn(false);resetsom();
+                msg.setText("*F I M   D O   J O G O*");if (comsom){somperde.start();resetsom();}
+                dica.setText(palavra);ativadesativabtn(false);
             }
         }
 
@@ -320,7 +318,7 @@ public class MainActivity extends AppCompatActivity {
     public void iniciar() {
         onRestart();
         componentes();som();figuras();mudacor();sortear();ativadesativabtn(true);
-        somin.start();
+        if (comsom){somin.start();}
         iniciado = true;
         jogada = 0;
         figura = 0;
@@ -347,7 +345,6 @@ public class MainActivity extends AppCompatActivity {
         for(xx=0;xx<ii;xx++){scoringa = scoringa + coringa[xx];}
 
         palavras.setText(scoringa);
-
     }
 
     @Override
@@ -385,9 +382,19 @@ public class MainActivity extends AppCompatActivity {
             iniciar();
             return true;
         }
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            somout.start();
+
+        if (id == R.id.tirasom) {
+            if (comsom){
+                comsom = false;
+                item.setTitle("Com Som");
+            }else {
+                comsom = true;
+                item.setTitle("Sem Som");
+            }
+            return true;
+        }
+
+        if (id == R.id.fechar) {
             finish();
             return true;
         }

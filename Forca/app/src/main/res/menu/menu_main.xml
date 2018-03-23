@@ -8,7 +8,12 @@
         android:title="Iniciar"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/tirasom"
+        android:orderInCategory="100"
+        android:title="Sem Som"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/fechar"
         android:orderInCategory="100"
         android:title="Fechar"
         app:showAsAction="never" />
