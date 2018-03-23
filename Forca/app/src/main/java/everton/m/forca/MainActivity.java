@@ -1,10 +1,12 @@
 package everton.m.forca;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -156,6 +158,23 @@ public class MainActivity extends AppCompatActivity {
         z.setClickable(estado);
     }
 
+    public void alerta(){
+        AlertDialog.Builder alerta;
+        alerta = new AlertDialog.Builder(this);
+        alerta.setTitle("Jogo da Forca");
+        alerta.setMessage("Iniciar Jogo ?");
+        alerta.setIcon(drawable.icomenu);
+
+        alerta.setNegativeButton("Ok", new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int which){iniciar();}});
+
+        alerta.setPositiveButton("Sair", new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int which){finish();}});
+
+        AlertDialog meualerta = alerta.create();
+        meualerta.show();
+        }
+
     public void busca(char letra){
         acum=0;
         acerto = false;
@@ -227,9 +246,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         }
-        else {msg = findViewById(id.msg);
-        msg.setTextColor(Color.rgb(255,0,0));
-            msg.setText("INICIE O JOGO NO MENU :");}
+        else {alerta();}
     }
 
     // ------------------------------TECLADO-----------------------------------------
