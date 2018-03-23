@@ -8,9 +8,9 @@
         android:title="Iniciar"
         app:showAsAction="never" />
     <item
-        android:id="@+id/tirasom"
+        android:id="@+id/config"
         android:orderInCategory="100"
-        android:title="Sem Som"
+        android:title="Configurar"
         app:showAsAction="never" />
     <item
         android:id="@+id/fechar"

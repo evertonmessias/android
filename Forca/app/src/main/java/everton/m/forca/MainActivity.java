@@ -1,6 +1,7 @@
 package everton.m.forca;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -32,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
     ImageView forca;
     Button a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
     MediaPlayer somacerto, somerro, somganha, somperde, somin;
+    Intent transicao;
+
+    public void mudasom(){
+        Intent novaTransicao = getIntent();
+        comsom = novaTransicao.getBooleanExtra("comsom",comsom);
+    }
 
     public void sortear(){
         BancoDados aleatorio = new BancoDados();
@@ -188,6 +195,7 @@ public class MainActivity extends AppCompatActivity {
     public void jogar(char letra){
 
         if(iniciado == true){
+            mudasom();
 
             ok = true;
             for (xx=0;xx<26;xx++){if(repetido[xx]==letra){ok = false;}}
@@ -334,7 +342,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void iniciar() {
         onRestart();
-        componentes();som();figuras();mudacor();sortear();ativadesativabtn(true);
+        componentes();som();figuras();mudacor();sortear();ativadesativabtn(true);mudasom();
         if (comsom){somin.start();}
         iniciado = true;
         jogada = 0;
@@ -400,14 +408,18 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
-        if (id == R.id.tirasom) {
-            if (comsom){
+        if (id == R.id.config) {
+            /*if (comsom){
                 comsom = false;
                 item.setTitle("Com Som");
             }else {
                 comsom = true;
                 item.setTitle("Sem Som");
-            }
+            }*/
+
+            Intent transicao = new Intent(MainActivity.this, Main2Activity.class);
+            startActivity(transicao);
+
             return true;
         }
 
