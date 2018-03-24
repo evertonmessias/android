@@ -66,10 +66,10 @@
         app:layout_constraintTop_toBottomOf="@+id/forca" />
 
     <TextView
-        android:background="#ddd"
         android:id="@+id/palavras"
         android:layout_width="360dp"
         android:layout_height="40dp"
+        android:background="#ddd"
         android:text=""
         android:textAlignment="center"
         android:textColor="#000"
@@ -383,7 +383,7 @@
         android:onClick="v"
         android:text="v"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/fim3"
+        app:layout_constraintBottom_toTopOf="@+id/placare"
         app:layout_constraintEnd_toStartOf="@+id/w"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -397,7 +397,7 @@
         android:onClick="w"
         android:text="w"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/fim3"
+        app:layout_constraintBottom_toTopOf="@+id/placare"
         app:layout_constraintEnd_toStartOf="@+id/x"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/v"
@@ -411,7 +411,7 @@
         android:onClick="x"
         android:text="x"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/fim3"
+        app:layout_constraintBottom_toTopOf="@+id/placare"
         app:layout_constraintEnd_toStartOf="@+id/y"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/w"
@@ -425,7 +425,7 @@
         android:onClick="y"
         android:text="y"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/fim3"
+        app:layout_constraintBottom_toTopOf="@+id/placare"
         app:layout_constraintEnd_toStartOf="@+id/z"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/x"
@@ -439,7 +439,7 @@
         android:onClick="z"
         android:text="z"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/fim3"
+        app:layout_constraintBottom_toTopOf="@+id/placare"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/fim2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -453,7 +453,7 @@
         android:layout_height="40dp"
         android:text=""
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/fim3"
+        app:layout_constraintBottom_toTopOf="@+id/placare"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/fim2"
@@ -465,25 +465,40 @@
         android:layout_height="40dp"
         android:text=""
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/fim3"
+        app:layout_constraintBottom_toTopOf="@+id/placare"
         app:layout_constraintEnd_toStartOf="@+id/fim"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/z"
         app:layout_constraintTop_toBottomOf="@+id/t" />
 
-    <TextView
-        android:id="@+id/fim3"
-        android:layout_width="360dp"
+   <TextView
+        android:id="@+id/placara"
+        android:layout_width="100dp"
         android:layout_height="26dp"
-        android:text="Everton M."
+        android:layout_marginEnd="8dp"
+        android:text="Acertos:"
         android:textAlignment="center"
-        android:textColor="#aaa"
+        android:textColor="#0000ff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/placare"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v" />
+
+    <TextView
+        android:id="@+id/placare"
+        android:layout_width="100dp"
+        android:layout_height="26dp"
+        android:text="Erros:"
+        android:textAlignment="center"
+        android:textColor="#ff0000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/v" />
+        app:layout_constraintStart_toEndOf="@+id/placara"
+        app:layout_constraintTop_toBottomOf="@+id/y" />
 
 
 </android.support.constraint.ConstraintLayout>

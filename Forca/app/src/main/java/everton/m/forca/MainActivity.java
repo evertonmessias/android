@@ -16,25 +16,79 @@ import android.graphics.drawable.Drawable;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import java.io.IOException;
 import static everton.m.forca.R.*;
 
 public class MainActivity extends AppCompatActivity {
 
-    String palavra, dika, scoringa;
     char coringa[] ,repetido[], apalavra[], caracter;
-    int xx, ii, acum, jogada , figura, chances, sorteio;
-    int acompletar;
+    int xx, ii, acum, jogada , figura, chances, sorteio, acompletar, pacertos, perros;
     boolean acerto, ok, iniciado=false, comsom=true;
 
     Drawable forca0, forca1, forca2, forca3, forca4,forca5, forca6, forca7;
-    TextView avisos, msg, dica, palavras;
+    TextView avisos, msg, dica, palavras, placara, placare;
     ImageView forca;
     Button a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
     MediaPlayer somacerto, somerro, somganha, somperde, somin;
+    BancoDados aleatorio;
+    Arquivo arqacerto, arqerro;
+    String palavra, dika, scoringa;
+    String nomearqa = "arqacerto.txt";
+    String nomearqe = "arqerro.txt";
+
+    public void placar(){
+        try {
+            arqacerto = new Arquivo(nomearqa);
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        try {
+            arqerro = new Arquivo(nomearqe);
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
+
+    public int leracerto(){
+        placar();
+        try {
+            pacertos = Integer.parseInt(arqacerto.ler());
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        return pacertos;
+    }
+
+    public int lererro(){
+        placar();
+        try {
+            perros = Integer.parseInt(arqerro.ler());
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        return perros;
+    }
+
+    public void gravaracerto(int pacertos){
+        placar();
+        try {
+            arqacerto.gravar(String.valueOf(pacertos));
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
+
+    public void gravarerro(int perros){
+        placar();
+        try {
+            arqerro.gravar(String.valueOf(perros));
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
 
     public void sortear(){
-        BancoDados aleatorio = new BancoDados();
+        aleatorio = new BancoDados();
         sorteio = (int)(Math.random() * 100);
 
         palavra = aleatorio.matriz[sorteio][0];
@@ -42,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void componentes(){
+        placara = findViewById(id.placara);
+        placare = findViewById(id.placare);
         avisos = findViewById(id.avisos);
         msg = findViewById(id.msg);
         dica = findViewById(id.dica);
@@ -173,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
 
         AlertDialog meualerta = alerta.create();
         meualerta.show();
-        }
+    }
 
     public void busca(char letra){
         acum=0;
@@ -185,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
                 acerto = true;}}
     }
 
-    public void jogar(char letra){
+    public void jogar(char letra) {
 
         if(iniciado == true){
 
@@ -194,56 +250,60 @@ public class MainActivity extends AppCompatActivity {
 
             if(ok){
 
-            if (chances > 0 && acompletar > 0 ) {
+                if (chances > 0 && acompletar > 0 ) {
 
-        busca(letra);
-        repetido[jogada] = letra;
+                    busca(letra);
+                    repetido[jogada] = letra;
 
-        if(acerto == true){
-            avisos.setText("Jogada "+ (jogada+1) +"  ,  Letra  [ "+letra+" ]  ,  Chance "+chances+"/6");
-            msg.setTextColor(Color.rgb(0,255,0));if (comsom){somacerto.start();}
-            msg.setText("**** ACERTOU ****");
-            acompletar=acompletar-acum;}
-        else {chances--;
-              avisos.setText("Jogada "+ (jogada+1) +"  ,  Letra  [ "+letra+" ]  ,  Chance "+chances+"/6");
-              msg.setTextColor(Color.rgb(255,0,0));if (comsom){somerro.start();}
-              msg.setText("- - ERROU - -");figura++;
-            switch (figura){
-                case 1:
-                    forca.setImageDrawable(forca1);
-                    break;
-                case 2:
-                    forca.setImageDrawable(forca2);
-                    break;
-                case 3:
-                    forca.setImageDrawable(forca3);
-                    break;
-                case 4:
-                    forca.setImageDrawable(forca4);
-                    break;
-                case 5:
-                    forca.setImageDrawable(forca5);
-                    break;
-                case 6:
-                    forca.setImageDrawable(forca6);
-                    break;
-                default:
-                    forca.setImageDrawable(forca0);
-            }}
-        jogada++;
-                scoringa="";
-                for(xx=0;xx<ii;xx++){scoringa = scoringa + coringa[xx];}
-                palavras.setText(scoringa);
+                    if(acerto == true){
+                        avisos.setText("Jogada: "+(jogada+1)+"      Letra: "+letra+"      Chances: "+chances);
+                        msg.setTextColor(Color.rgb(0,255,0));if (comsom){somacerto.start();}
+                        msg.setText("**** ACERTOU ****");
+                        acompletar=acompletar-acum;}
+                    else {chances--;
+                        avisos.setText("Jogada: "+(jogada+1)+"      Letra: "+letra+"      Chances: "+chances);
+                        msg.setTextColor(Color.rgb(255,0,0));if (comsom){somerro.start();}
+                        msg.setText("- - ERROU - -");figura++;
+                        switch (figura){
+                            case 1:
+                                forca.setImageDrawable(forca1);
+                                break;
+                            case 2:
+                                forca.setImageDrawable(forca2);
+                                break;
+                            case 3:
+                                forca.setImageDrawable(forca3);
+                                break;
+                            case 4:
+                                forca.setImageDrawable(forca4);
+                                break;
+                            case 5:
+                                forca.setImageDrawable(forca5);
+                                break;
+                            case 6:
+                                forca.setImageDrawable(forca6);
+                                break;
+                            default:
+                                forca.setImageDrawable(forca0);
+                        }}
+                    jogada++;
+                    scoringa="";
+                    for(xx=0;xx<ii;xx++){scoringa = scoringa + coringa[xx];}
+                    palavras.setText(scoringa);
+                }
+                if (acompletar <= 0) {msg.setTextColor(Color.rgb(0,0,255));
+                    msg.setText("*** V E N C E U ***");if (comsom){somganha.start();resetsom();}
+                    forca.setImageDrawable(forca7);ativadesativabtn(false);
+                    pacertos++;placara.setText("Acertos: "+pacertos);
+                    gravaracerto(pacertos);
+                }
+                else if (chances <= 0){msg.setTextColor(Color.rgb(255,0,0));
+                    msg.setText("*F I M   D O   J O G O*");if (comsom){somperde.start();resetsom();}
+                    dica.setText(palavra);ativadesativabtn(false);
+                    perros++;placare.setText("Erros: "+perros);
+                    gravarerro(perros);
+                }
             }
-            if (acompletar <= 0) {msg.setTextColor(Color.rgb(0,0,255));
-                msg.setText("*** V E N C E U ***");if (comsom){somganha.start();resetsom();}
-                forca.setImageDrawable(forca7);ativadesativabtn(false);
-            }
-            else if (chances <= 0){msg.setTextColor(Color.rgb(255,0,0));
-                msg.setText("*F I M   D O   J O G O*");if (comsom){somperde.start();resetsom();}
-                dica.setText(palavra);ativadesativabtn(false);
-            }
-        }
 
         }
         else {alerta();}
@@ -251,90 +311,92 @@ public class MainActivity extends AppCompatActivity {
 
     // ------------------------------TECLADO-----------------------------------------
 
-    public void a(View view) {
+    public void a(View view){
         jogar('a');if(iniciado == true){a.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void b(View view) {
+    public void b(View view){
         jogar('b');if(iniciado == true){b.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void c(View view) {
+    public void c(View view){
         jogar('c');if(iniciado == true){c.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void d(View view) {
+    public void d(View view){
         jogar('d');if(iniciado == true){d.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void e(View view) {
+    public void e(View view){
         jogar('e');if(iniciado == true){e.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void f(View view) {
+    public void f(View view){
         jogar('f');if(iniciado == true){f.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void g(View view) {
+    public void g(View view){
         jogar('g');if(iniciado == true){g.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void h(View view) {
+    public void h(View view){
         jogar('h');if(iniciado == true){h.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void i(View view) {
+    public void i(View view){
         jogar('i');if(iniciado == true){i.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void j(View view) {
+    public void j(View view){
         jogar('j');if(iniciado == true){j.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void k(View view) {
+    public void k(View view){
         jogar('k');if(iniciado == true){k.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void l(View view) {
+    public void l(View view){
         jogar('l');if(iniciado == true){l.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void m(View view) {
+    public void m(View view){
         jogar('m');if(iniciado == true){m.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void n(View view) {
+    public void n(View view){
         jogar('n');if(iniciado == true){n.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void o(View view) {
+    public void o(View view){
         jogar('o');if(iniciado == true){o.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void p(View view) {
+    public void p(View view){
         jogar('p');if(iniciado == true){p.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void q(View view) {
+    public void q(View view){
         jogar('q');if(iniciado == true){q.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void r(View view) {
+    public void r(View view){
         jogar('r');if(iniciado == true){r.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void s(View view) {
+    public void s(View view){
         jogar('s');if(iniciado == true){s.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void t(View view) {
+    public void t(View view){
         jogar('t');if(iniciado == true){t.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void u(View view) {
+    public void u(View view){
         jogar('u');if(iniciado == true){u.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void v(View view) {
+    public void v(View view){
         jogar('v');if(iniciado == true){v.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void w(View view) {
+    public void w(View view){
         jogar('w');if(iniciado == true){w.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void x(View view) {
+    public void x(View view){
         jogar('x');if(iniciado == true){x.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void y(View view) {
+    public void y(View view){
         jogar('y');if(iniciado == true){y.setBackgroundColor(Color.rgb(255,0,0));}}
 
-    public void z(View view) {
+    public void z(View view){
         jogar('z');if(iniciado == true){z.setBackgroundColor(Color.rgb(255,0,0));}}
 
 
     // ------------------------------INICIO-----------------------------------------
 
-    public void iniciar() {
+    public void iniciar(){
         onRestart();
         componentes();som();figuras();mudacor();sortear();ativadesativabtn(true);
+        pacertos = leracerto();
+        perros = lererro();
         if (comsom){somin.start();}
         iniciado = true;
         jogada = 0;
@@ -354,6 +416,8 @@ public class MainActivity extends AppCompatActivity {
         msg.setTextColor(Color.rgb(0,255,0));
         msg.setText("Boa Sorte!");
         dica.setText("Dica: "+dika+", com "+ii+" letras");
+        placara.setText("Acertos: "+pacertos);
+        placare.setText("Erros: "+perros);
 
         coringa = palavra.toCharArray();
         apalavra = palavra.toCharArray();
@@ -389,7 +453,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item)  {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
