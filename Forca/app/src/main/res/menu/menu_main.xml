@@ -10,7 +10,7 @@
     <item
         android:id="@+id/config"
         android:orderInCategory="100"
-        android:title="Configurar"
+        android:title="Sem Som"
         app:showAsAction="never" />
     <item
         android:id="@+id/fechar"
