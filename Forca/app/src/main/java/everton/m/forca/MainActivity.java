@@ -22,7 +22,7 @@ import static everton.m.forca.R.*;
 public class MainActivity extends AppCompatActivity {
 
     char coringa[] ,repetido[], apalavra[], caracter;
-    int xx, ii, acum, jogada , figura, chances, sorteio, acompletar, pacertos, perros;
+    int xx, ii, acum, jogada , figura, chances, sorteio, acompletar, pacertos, perros, CODE = 1;
     boolean acerto, ok, iniciado=false, comsom=true;
 
     Drawable forca0, forca1, forca2, forca3, forca4,forca5, forca6, forca7;
@@ -33,24 +33,21 @@ public class MainActivity extends AppCompatActivity {
     BancoDados aleatorio;
     Arquivo arqacerto, arqerro;
     String palavra, dika, scoringa;
-    String nomearqa = "arqacerto.txt";
-    String nomearqe = "arqerro.txt";
 
-    public void placar(){
+    public void placar(Boolean criar){
         try {
-            arqacerto = new Arquivo(nomearqa);
+            arqacerto = new Arquivo("acertos.txt",criar);
         } catch (IOException e1) {
             e1.printStackTrace();
         }
         try {
-            arqerro = new Arquivo(nomearqe);
+            arqerro = new Arquivo("erros.txt",criar);
         } catch (IOException e1) {
             e1.printStackTrace();
         }
     }
 
     public int leracerto(){
-        placar();
         try {
             pacertos = Integer.parseInt(arqacerto.ler());
         } catch (IOException e1) {
@@ -60,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public int lererro(){
-        placar();
         try {
             perros = Integer.parseInt(arqerro.ler());
         } catch (IOException e1) {
@@ -70,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gravaracerto(int pacertos){
-        placar();
         try {
             arqacerto.gravar(String.valueOf(pacertos));
         } catch (IOException e1) {
@@ -79,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gravarerro(int perros){
-        placar();
         try {
             arqerro.gravar(String.valueOf(perros));
         } catch (IOException e1) {
@@ -394,6 +388,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void iniciar(){
         onRestart();
+        placar(true);
         componentes();som();figuras();mudacor();sortear();ativadesativabtn(true);
         pacertos = leracerto();
         perros = lererro();
@@ -443,20 +438,18 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item)  {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
         if (id == R.id.iniciar) {
