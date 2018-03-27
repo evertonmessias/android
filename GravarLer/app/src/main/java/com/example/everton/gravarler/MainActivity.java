@@ -1,29 +1,26 @@
 package com.example.everton.gravarler;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView saida;
     EditText entrada;
-    String path,textoin, nomearquivo = "arquivo.txt";
+    String path,textoin,nomearquivo = "arquivo.txt";
 
     public void gravar(View view) {
-        saida = findViewById(R.id.out);
+
         entrada = findViewById(R.id.in);
 
         textoin = entrada.toString();
@@ -31,9 +28,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             path = salvarInterno(textoin); //Gravar na memória Interna
 
-            //Mensagem
             Toast.makeText(this, "Arquivo gravado em" + path,Toast.LENGTH_SHORT).show();
-            finish();
         } catch (IOException e) {
             Toast.makeText(this, "Erro: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             e.printStackTrace();
@@ -42,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
     private String salvarInterno(String text) throws IOException {
 
-        //Tratativa para Modo Privado
         FileOutputStream out = openFileOutput(nomearquivo,	MODE_PRIVATE);
         PrintWriter pw = new PrintWriter(out); //Tratativa para escrita
 
@@ -54,6 +48,36 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    public void ler(View view) {
+
+        saida = findViewById(R.id.out);
+
+        try {
+            LerInterno();
+
+        } catch (IOException e) {
+            Toast.makeText(this, "Erro: " + e.getMessage(), Toast.LENGTH_SHORT);
+            e.printStackTrace();
+        }
+
+    }
+
+    private void LerInterno() throws IOException {
+        FileInputStream infl = openFileInput(nomearquivo);
+
+        Scanner scanner = new Scanner(infl);
+        try{
+            StringBuilder sb = new StringBuilder();
+            while (scanner.hasNext()){
+                String line = scanner.nextLine();
+                sb.append(line).append(System.lineSeparator());
+            }
+            saida.setText(sb.toString());
+        }finally{
+            scanner.close();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

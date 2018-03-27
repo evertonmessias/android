@@ -56,7 +56,7 @@ public class LeituraActivity extends Activity {
 			scanner.close();
 		}
 	}
-	//Função: LerInterno() - Função para pegar o arquivo na memória Externa e abrir e mostrar o conteúdo.
+	//Função: LerExterno() - Função para pegar o arquivo na memória Externa e abrir e mostrar o conteúdo.
 	private void LerExterno() throws IOException{
 		String status = Environment.getExternalStorageState();
 		
