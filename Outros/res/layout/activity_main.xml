@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/txt_memoria_interna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Memória Interna" />
+
+    <Button
+        android:id="@+id/btn_gravar_interna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="fGravarInterna"
+        android:text="Gravar" />
+
+    <Button
+        android:id="@+id/btn_ler_interna"
+        android:layout_width="match_parent"
+        android:onClick="fLerInterna"
+        android:layout_height="wrap_content"
+        android:text="Ler" />
+
+    <TextView
+        android:id="@+id/txt_memoria_externa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="memória Externa" />
+
+    <Button
+        android:id="@+id/btn_gravar_externa"
+        android:layout_width="match_parent"
+        android:onClick="fGravarExterna"
+        android:layout_height="wrap_content"
+        android:text="Gravar" />
+
+    <Button
+        android:id="@+id/btn_ler_externa"
+        android:layout_width="match_parent"
+        android:onClick="fLerExterna"
+        android:layout_height="wrap_content"
+        android:text="Ler" />
+
+</LinearLayout>
