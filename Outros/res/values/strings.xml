@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="app_name">LerGravarArquivos</string>
-    <string name="title_activity_leitura">LeituraActivity</string>
-    <string name="title_activity_gravar">GravarActivity</string>
-
-</resources>
