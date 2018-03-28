@@ -86,7 +86,7 @@
     <Button
         android:id="@+id/a"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="a"
         android:text="a"
@@ -100,7 +100,7 @@
     <Button
         android:id="@+id/b"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="b"
         android:text="b"
@@ -114,7 +114,7 @@
     <Button
         android:id="@+id/c"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="c"
         android:text="c"
@@ -128,7 +128,7 @@
     <Button
         android:id="@+id/d"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="d"
         android:text="d"
@@ -142,7 +142,7 @@
     <Button
         android:id="@+id/e"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="e"
         android:text="e"
@@ -156,7 +156,7 @@
     <Button
         android:id="@+id/f"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="f"
         android:text="f"
@@ -170,7 +170,7 @@
     <Button
         android:id="@+id/g"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="g"
         android:text="g"
@@ -184,7 +184,7 @@
     <Button
         android:id="@+id/h"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="h"
         android:text="h"
@@ -198,7 +198,7 @@
     <Button
         android:id="@+id/i"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="i"
         android:text="i"
@@ -212,7 +212,7 @@
     <Button
         android:id="@+id/j"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="j"
         android:text="j"
@@ -226,7 +226,7 @@
     <Button
         android:id="@+id/k"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="k"
         android:text="k"
@@ -240,7 +240,7 @@
     <Button
         android:id="@+id/l"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="l"
         android:text="l"
@@ -254,7 +254,7 @@
     <Button
         android:id="@+id/m"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="m"
         android:text="m"
@@ -268,7 +268,7 @@
     <Button
         android:id="@+id/n"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="n"
         android:text="n"
@@ -282,7 +282,7 @@
     <Button
         android:id="@+id/o"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="o"
         android:text="o"
@@ -296,7 +296,7 @@
     <Button
         android:id="@+id/p"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="p"
         android:text="p"
@@ -310,7 +310,7 @@
     <Button
         android:id="@+id/q"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="q"
         android:text="q"
@@ -324,7 +324,7 @@
     <Button
         android:id="@+id/r"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="r"
         android:text="r"
@@ -338,7 +338,7 @@
     <Button
         android:id="@+id/s"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="s"
         android:text="s"
@@ -352,7 +352,7 @@
     <Button
         android:id="@+id/t"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="t"
         android:text="t"
@@ -366,7 +366,7 @@
     <Button
         android:id="@+id/u"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="u"
         android:text="u"
@@ -380,7 +380,7 @@
     <Button
         android:id="@+id/v"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="v"
         android:text="v"
@@ -394,7 +394,7 @@
     <Button
         android:id="@+id/w"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="w"
         android:text="w"
@@ -408,7 +408,7 @@
     <Button
         android:id="@+id/x"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="x"
         android:text="x"
@@ -422,7 +422,7 @@
     <Button
         android:id="@+id/y"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="y"
         android:text="y"
@@ -436,7 +436,7 @@
     <Button
         android:id="@+id/z"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#ddd"
         android:onClick="z"
         android:text="z"
@@ -452,7 +452,7 @@
     <TextView
         android:id="@+id/fim"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:text=""
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/placare"
@@ -464,7 +464,7 @@
     <TextView
         android:id="@+id/fim2"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:text=""
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/placare"

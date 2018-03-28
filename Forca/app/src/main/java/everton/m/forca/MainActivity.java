@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sortear(){
         aleatorio = new BancoDados();
-        sorteio = (int)(Math.random() * 100);
+        sorteio = (int)(Math.random() * 150);
 
         palavra = aleatorio.matriz[sorteio][0];
         dika = aleatorio.matriz[sorteio][1];
