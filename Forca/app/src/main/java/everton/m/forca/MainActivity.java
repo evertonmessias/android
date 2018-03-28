@@ -18,19 +18,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import java.io.IOException;
 import static everton.m.forca.R.*;
-import android.os.Environment;
 import android.widget.Toast;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.PrintWriter;
+
 import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
 
     char coringa[] ,repetido[], apalavra[], caracter;
     int xx, ii, acum, jogada , figura, chances, sorteio, acompletar, pacertos, perros;
-    boolean acerto, ok, iniciado=false, comsom=true,sd=false;
+    boolean acerto, ok, iniciado=false, comsom=true;
 
     Drawable forca0, forca1, forca2, forca3, forca4,forca5, forca6, forca7;
     TextView avisos, msg, dica, palavras, placara, placare;
@@ -46,17 +44,14 @@ public class MainActivity extends AppCompatActivity {
     // ******************** ARQUIVOS ***************************
 
 
-    // ********************  GRAVAR  *************************************
+    // ********************  GRAVAR  ***************************
 
 
     public void gravaracerto(String textoin) throws IOException {
-        if (sd) {salvarExterno(textoin, arqacerto);} //Gravar na memória Externa
-        else{salvarInterno(textoin, arqacerto);} }  //Gravar na memória Interna
+        salvarInterno(textoin, arqacerto);}  //Gravar na memória Interna
 
     public void gravarerro(String textoin) throws IOException {
-        if (sd) {salvarExterno(textoin, arqerro);} //Gravar na memória Externa
-        else{salvarInterno(textoin, arqerro);}   //Gravar na memória Interna
-    }
+        salvarInterno(textoin, arqerro);}   //Gravar na memória Interna
 
     private void salvarInterno(String textoin, String nomearquivo){
         try {
@@ -70,39 +65,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void salvarExterno(String textoin, String nomearquivo) throws IOException {
-        //Tratativa para memória externa
-        String status = Environment.getExternalStorageState();
-        //Verifica se está montado o SD Card
-        if( !status.equals(Environment.MEDIA_MOUNTED)){
-            throw new IOException("O SD Card não montado ou não disponível!!!");
-        }
-        //Em caso de montado, irá pegar o diretorio padrão
-        File dir = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
-        File file = new File(dir, nomearquivo); //Criar arquivo ou reutilizar
-        PrintWriter pw = new PrintWriter(file);	//Funcao para escrita
-        try{
-            pw.print(textoin);
-            pw.close();
-            Toast.makeText(getBaseContext(),"ARQUIVO SALVO",Toast.LENGTH_SHORT).show();
-        }catch (Exception e) {
-            Toast.makeText(this, "Erro: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-            e.printStackTrace();
-        }}
-
-
     // ***************************   LER  *************************************
 
 
     public String leracerto() throws IOException {
         String textoout;
-        if (sd) {textoout = LerExterno(arqacerto);}else {textoout = LerInterno(arqacerto);}
+        textoout = LerInterno(arqacerto);
         return textoout;
     }
 
     public String lererro() throws IOException {
         String textoout;
-        if (sd) {textoout = LerExterno(arqerro);}else {textoout = LerInterno(arqerro);}
+        textoout = LerInterno(arqerro);
         return textoout;
     }
 
@@ -120,33 +94,8 @@ public class MainActivity extends AppCompatActivity {
                 sb.append(line).append(System.lineSeparator());
             }
             Toast.makeText(getBaseContext(),"PLACAR LIDO",Toast.LENGTH_SHORT).show();
-            scanner.close();
-        }catch (Exception e) {
-            Toast.makeText(getBaseContext(),"PLACAR NÃO LIDO",Toast.LENGTH_SHORT).show();
-            e.printStackTrace();}
-        return texto;
-    }
-
-
-    //Função: LerExterno() - Função para pegar o arquivo na memória Externa e abrir e mostrar o conteúdo.
-    private String LerExterno(String nomearquivo) throws IOException{
-        String texto="";
-        String status = Environment.getExternalStorageState();
-        if (!status.equals(Environment.MEDIA_MOUNTED)){
-            throw new IOException("SD Card não encontrado !!");}
-
-        File dir = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
-        Scanner scanner = new Scanner( new File(dir, nomearquivo));
-
-        try{
-            StringBuilder sb = new StringBuilder();
-            while (scanner.hasNext()){
-                String line = scanner.nextLine();
-                sb.append(line).append(System.lineSeparator());
-            }
             texto = sb.toString();
             scanner.close();
-            Toast.makeText(getBaseContext(),"PLACAR LIDO",Toast.LENGTH_SHORT).show();
         }catch (Exception e) {
             Toast.makeText(getBaseContext(),"PLACAR NÃO LIDO",Toast.LENGTH_SHORT).show();
             e.printStackTrace();}
@@ -485,12 +434,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void iniciar(){
         onRestart();
-        componentes();som();figuras();mudacor();sortear();ativadesativabtn(true);
+        som();figuras();mudacor();sortear();ativadesativabtn(true);
 
+        /*
         if (spacertos == "" || spacertos == null){pacertos=0;}else{
         pacertos = Integer.parseInt(spacertos.toString());}
         if (sperros == "" || sperros == null){perros=0;}else{
         perros = Integer.parseInt(sperros.toString());}
+        */
 
         if (comsom){somin.start();}
         iniciado = true;
@@ -511,8 +462,6 @@ public class MainActivity extends AppCompatActivity {
         msg.setTextColor(Color.rgb(0,255,0));
         msg.setText("Boa Sorte!");
         dica.setText("Dica: "+dika+", com "+ii+" letras");
-        placara.setText("Acertos: "+pacertos);
-        placare.setText("Erros: "+perros);
 
         coringa = palavra.toCharArray();
         apalavra = palavra.toCharArray();
@@ -538,7 +487,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        lerplacar();
+        lerplacar();componentes();
+        placara.setText("Acertos: "+spacertos);
+        placare.setText("Erros: "+sperros);
 
     }
 
