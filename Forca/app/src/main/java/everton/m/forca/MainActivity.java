@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             FileOutputStream fOut = openFileOutput(nomearquivo, MODE_PRIVATE);
             fOut.write(textoin.getBytes());
             fOut.close();
-            Toast.makeText(getBaseContext(),"ARQUIVO SALVO",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(),"PLACAR SALVO",Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             Toast.makeText(this, "Erro: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             e.printStackTrace();
@@ -486,8 +486,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "everton.messias@gmail.com", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "everton.messias@gmail.com", Snackbar.LENGTH_LONG).show();
             }
         });
         lerplacar();componentes();
