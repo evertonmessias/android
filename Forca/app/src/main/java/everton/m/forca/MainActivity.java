@@ -109,9 +109,10 @@ public class MainActivity extends AppCompatActivity {
     //Função: LerInterno() - Função para pegar o arquivo na memória Interna e abrir e mostrar o conteúdo.
     private String LerInterno(String nomearquivo) throws IOException {
         String texto="";
-        FileInputStream infl = openFileInput(nomearquivo);
 
+        FileInputStream infl = openFileInput(nomearquivo);
         Scanner scanner = new Scanner(infl);
+
         try{
             StringBuilder sb = new StringBuilder();
             while (scanner.hasNext()){
@@ -469,10 +470,7 @@ public class MainActivity extends AppCompatActivity {
 
     // ------------------------------INICIO-----------------------------------------
 
-    public void iniciar(){
-        onRestart();
-        componentes();som();figuras();mudacor();sortear();ativadesativabtn(true);
-
+    public void lerplacar(){
         try {
             spacertos = leracerto();
         } catch (IOException e) {
@@ -483,15 +481,16 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
-        if (spacertos == null || spacertos == ""){
-            pacertos = 0;
-        }else{pacertos = Integer.parseInt(spacertos);}
+    public void iniciar(){
+        onRestart();
+        componentes();som();figuras();mudacor();sortear();ativadesativabtn(true);
 
-        if (sperros == null || sperros == ""){
-            perros = 0;
-        }else{perros = Integer.parseInt(sperros);}
-
+        if (spacertos == "" || spacertos == null){pacertos=0;}else{
+        pacertos = Integer.parseInt(spacertos.toString());}
+        if (sperros == "" || sperros == null){perros=0;}else{
+        perros = Integer.parseInt(sperros.toString());}
 
         if (comsom){somin.start();}
         iniciado = true;
@@ -539,6 +538,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        lerplacar();
 
     }
 
