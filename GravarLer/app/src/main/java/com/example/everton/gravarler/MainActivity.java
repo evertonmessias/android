@@ -7,13 +7,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -22,68 +19,37 @@ public class MainActivity extends AppCompatActivity {
     Boolean sd = false;
     TextView saida;
     EditText entrada;
-    String path,textoin,nomearquivo = "arquivo3.txt";
+    String textoout,textoin,nomearquivo = "arquivo.txt";
 
 
-  // ***************************  GRAVAR  *************************************
+    // ***************************  GRAVAR  *************************************
 
 
-    public void gravar(View view) {
+    public void gravar(View view) throws IOException {
 
         entrada = findViewById(R.id.in);
+        textoin = entrada.getText().toString();
 
-        textoin = entrada.toString();
-
-        try {
-            if (sd) {salvarExterno(textoin); //Gravar na memória Externa
-            }else{salvarInterno(textoin);}   //Gravar na memória Interna
-
-            Toast.makeText(this, "Arquivo gravado em" + path,Toast.LENGTH_SHORT).show();
-        } catch (IOException e) {
-            Toast.makeText(this, "Erro: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-            e.printStackTrace();
-        }
+        if (sd) {salvarExterno(textoin);} //Gravar na memória Externa
+        else{salvarInterno(textoin);}   //Gravar na memória Interna
     }
 
-    public void salvarInterno(String textoin){
+    private void salvarInterno(String textoin){
 
         try {
             FileOutputStream fOut = openFileOutput(nomearquivo, MODE_PRIVATE);
             fOut.write(textoin.getBytes());
             fOut.close();
-            Toast.makeText(getBaseContext(),"ARQUIVO SALVO",
-                    Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(),"ARQUIVO SALVO",Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
-            //
+            Toast.makeText(this, "Erro: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
     }
 
-
-
-    /*
-    //Função: salvarInterno(Text) - Irá salvar o texto digitado no EditText na memória Interna
-    private String salvarInterno(String text) throws IOException {
-
-        //Tratativa para Modo Privado
-        FileOutputStream out = openFileOutput(nomearquivo,	MODE_PRIVATE);
-        PrintWriter pw = new PrintWriter(out); //Tratativa para escrita
-
-        try {
-            pw.print(text);
-            return getFilesDir().getPath() + File.separator + nomearquivo;
-        } finally {
-            pw.close();
-        }
-
-    }*/
-
-
-    //Função: salvarExterno(Text) - Irá salvar o texto digitado no EditText na memória Externa
-    private String salvarExterno(String text) throws IOException {
+    private void salvarExterno(String textoin) throws IOException {
         //Tratativa para memória externa
         String status = Environment.getExternalStorageState();
-
         //Verifica se está montado o SD Card
         if( !status.equals(Environment.MEDIA_MOUNTED)){
             throw new IOException("O SD Card não montado ou não disponível!!!");
@@ -92,83 +58,50 @@ public class MainActivity extends AppCompatActivity {
         File dir = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
         File file = new File(dir, nomearquivo); //Criar arquivo ou reutilizar
         PrintWriter pw = new PrintWriter(file);	//Funcao para escrita
-
         try{
-            pw.print(text);
-            return file.getPath();
-        }finally {
+            pw.print(textoin);
             pw.close();
+            Toast.makeText(getBaseContext(),"ARQUIVO SALVO",Toast.LENGTH_SHORT).show();
+        }catch (Exception e) {
+            Toast.makeText(this, "Erro: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
         }}
 
 
     // ***************************   LER  *************************************
 
 
-    public void ler(View view) {
+    public void ler(View view) throws IOException {
 
         saida = findViewById(R.id.out);
-
-        try {
-            if (sd) {LerExterno();}else {LerInterno();}
-
-
-        } catch (IOException e) {
-            Toast.makeText(this, "Erro: " + e.getMessage(), Toast.LENGTH_SHORT);
-            e.printStackTrace();
-        }
-
+        if (sd) {textoout = LerExterno();}else {textoout = LerInterno();}
+        saida.setText(textoout);
     }
 
 
-    public void LerInterno(){
+    //Função: LerInterno() - Função para pegar o arquivo na memória Interna e abrir e mostrar o conteúdo.
+    private String LerInterno(){
+        String texto="";
         try{
             FileInputStream fin = openFileInput(nomearquivo);
             int c;
-            String temp="";
             while( (c = fin.read()) != -1){
-                temp = temp + Character.toString((char)c);
-            }
-            saida.setText(temp);
-            Toast.makeText(getBaseContext(),"ARQUIVO LIDO",
-                    Toast.LENGTH_SHORT).show();
-
-        }catch(Exception e){
-
+                texto = texto + Character.toString((char)c);}
+            fin.close();
+            Toast.makeText(getBaseContext(),"ARQUIVO LIDO",Toast.LENGTH_SHORT).show();
         }
+        catch (Exception e) {
+            Toast.makeText(this, "Erro: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            e.printStackTrace();}
+        return texto;
     }
-
-
-
-
-    /*
-
-    //Função: LerInterno() - Função para pegar o arquivo na memória Interna e abrir e mostrar o conteúdo.
-    private void LerInterno() throws IOException {
-        FileInputStream infl = openFileInput(nomearquivo);
-
-        Scanner scanner = new Scanner(infl);
-        try{
-            StringBuilder sb = new StringBuilder();
-            while (scanner.hasNext()){
-                String line = scanner.nextLine();
-                sb.append(line).append(System.lineSeparator());
-            }
-            saida.setText(sb.toString());
-        }finally{
-            scanner.close();
-        }
-    }
-
-
-*/
 
     //Função: LerExterno() - Função para pegar o arquivo na memória Externa e abrir e mostrar o conteúdo.
-    private void LerExterno() throws IOException{
+    private String LerExterno() throws IOException{
+        String texto="";
         String status = Environment.getExternalStorageState();
-
         if (!status.equals(Environment.MEDIA_MOUNTED)){
-            throw new IOException("O SD Card não montado ou encontrado");
-        }
+            throw new IOException("SD Card não encontrado !!");}
 
         File dir = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
         Scanner scanner = new Scanner( new File(dir, nomearquivo));
@@ -179,10 +112,13 @@ public class MainActivity extends AppCompatActivity {
                 String line = scanner.nextLine();
                 sb.append(line).append(System.lineSeparator());
             }
-            saida.setText(sb.toString());
-        }finally{
+            texto = sb.toString();
             scanner.close();
-        }
+            Toast.makeText(getBaseContext(),"ARQUIVO LIDO",Toast.LENGTH_SHORT).show();
+        }catch (Exception e) {
+            Toast.makeText(this, "Erro: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            e.printStackTrace();}
+        return texto;
     }
 
 
