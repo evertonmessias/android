@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
     MediaPlayer somacerto, somerro, somganha, somperde, somin;
     BancoDados aleatorio;
     String palavra, dika, scoringa, spacertos,sperros;
-    String arqacerto = "arqacerto.txt";
-    String arqerro = "arqerro.txt";
+    String arqacerto = "acertos.txt";
+    String arqerro = "erros.txt";
 
 
     // ******************** ARQUIVOS ***************************
@@ -430,18 +430,21 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        if (spacertos == "" || spacertos == null){pacertos=0;}
+        else{
+        pacertos = Integer.parseInt(spacertos.trim().toString());
+        }
+        if (sperros == "" || sperros == null){perros=0;}
+        else{
+        perros = Integer.parseInt(sperros.trim().toString());
+        }
+
     }
 
     public void iniciar(){
         onRestart();
         som();figuras();mudacor();sortear();ativadesativabtn(true);
-
-        /*
-        if (spacertos == "" || spacertos == null){pacertos=0;}else{
-        pacertos = Integer.parseInt(spacertos.toString());}
-        if (sperros == "" || sperros == null){perros=0;}else{
-        perros = Integer.parseInt(sperros.toString());}
-        */
 
         if (comsom){somin.start();}
         iniciado = true;
@@ -488,8 +491,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         lerplacar();componentes();
-        placara.setText("Acertos: "+spacertos);
-        placare.setText("Erros: "+sperros);
+        placara.setText("Acertos: "+pacertos);
+        placare.setText("Erros: "+perros);
 
     }
 

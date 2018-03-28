@@ -1,4 +1,4 @@
-#Wed Mar 28 08:04:10 BRT 2018
-base.0=/home/everton/programacao/android/Forca/app/build/intermediates/transforms/dexMerger/debug/195
+#Wed Mar 28 09:27:51 BRT 2018
+base.0=/home/everton/programacao/android/Forca/app/build/intermediates/transforms/dexMerger/debug/214
 path.0=classes.dex
 renamed.0=classes.dex
