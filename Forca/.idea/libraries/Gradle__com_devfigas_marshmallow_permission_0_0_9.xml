@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.devfigas:marshmallow-permission-0.0.9">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/marshmallow-permission-0.0.9.aar/f1734f966017855cd0e99ca75e828fdd/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/marshmallow-permission-0.0.9.aar/f1734f966017855cd0e99ca75e828fdd/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.devfigas/marshmallow-permission/0.0.9/89fe932ba5201b78326caa8047bbe261a7fbc193/marshmallow-permission-0.0.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

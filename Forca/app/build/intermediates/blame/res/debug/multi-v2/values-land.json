@@ -4,7 +4,7 @@
             "outputFile": "/home/everton/programacao/android/Forca/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7026e2d56cab09ddda8dfb1eae6602b4/res/values-land/values-land.xml",
+                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/31d97f9724ea6a16b3faf900f4f53dfd/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/86f33f6578f6ddc23925c6ea5d7452df/res/values-land/values-land.xml",
+                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/52d61388a8be243b660f2737e12ee733/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Wed Mar 28 20:41:38 BRT 2018
+0.baseType=DIRECTORY
+0.base=/home/everton/programacao/android/Forca/app/build/intermediates/transforms/dexMerger/debug/29
+0.path=classes.dex
+0.set=DEX
+count=1

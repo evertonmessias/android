@@ -4,7 +4,7 @@
             "outputFile": "/home/everton/programacao/android/Forca/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml",
             "map": [
                 {
-                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7026e2d56cab09ddda8dfb1eae6602b4/res/values-es/values-es.xml",
+                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/31d97f9724ea6a16b3faf900f4f53dfd/res/values-es/values-es.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
