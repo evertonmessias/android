@@ -9,9 +9,8 @@
     tools:context="evertonm.eq2grau.MainActivity"
     tools:layout_editor_absoluteY="80dp">
 
-
     <TextView
-        android:id="@+id/titulo2"
+        android:id="@+id/titulo1"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:text="Ax&#178; + Bx + C = 0"
@@ -83,7 +82,6 @@
         app:layout_constraintTop_toBottomOf="@+id/titulo2"
         app:layout_constraintVertical_bias="0.106" />
 
-
     <Button
         android:id="@+id/botao1"
         android:layout_width="wrap_content"
@@ -96,7 +94,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vb"
         app:layout_constraintVertical_bias="0.159" />
-
 
     <Button
         android:id="@+id/botao2"
@@ -125,7 +122,6 @@
         app:layout_constraintTop_toBottomOf="@+id/botao2"
         app:layout_constraintVertical_bias="0.211" />
 
-
    <TextView
         android:id="@+id/valores"
         android:layout_width="300dp"
@@ -153,8 +149,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botao2"
         app:layout_constraintVertical_bias="0.847" />
-
-
-
 
 </android.support.constraint.ConstraintLayout>
