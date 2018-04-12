@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Persistencia1</string>
+    <string name = "nome">Nome: </string >
+    <string name = "voltar">Voltar</string>
+    <string name = "lb_texto">Quando clicar no botão voltar a data e hora de acesso serão atualizadas.</string>
+</resources>
