@@ -1,4 +1,4 @@
-#Sun Jul 22 22:53:33 BRT 2018
+#Mon Jul 23 00:18:34 BRT 2018
 base.0=/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/build/intermediates/transforms/dexMerger/debug/24
 path.0=classes.dex
 renamed.0=classes.dex

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-24:12
+ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-25:12
 MERGED from [com.android.support:design:27.1.1] /home/everton/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/d494f61e6ea5d8919994f1ac743fb43f/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /home/everton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/af96c192abaeb76bd9b0a5440dd5056c/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/everton/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/9e61a4623e942f1179787274049ac576/AndroidManifest.xml:2:1-11:12
@@ -21,25 +21,25 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/everton/.gradle/c
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/everton/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/87942ae8dd9a444231137b3a578e1dc9/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/everton/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/fa5a297e70c2db2f7e0156737ab3b71a/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] /home/everton/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b1ad76e07019ddeb6a2a0a7b17b70457/AndroidManifest.xml:17:1-22:12
-INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-25:12
 	package
 		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:3:5-40
 		INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml
 		INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml
-		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-24:12
+		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-25:12
 		INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml
-		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-24:12
+		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:1-25:12
 		INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:5:5-22:19
+ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:5:5-23:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/everton/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/9e61a4623e942f1179787274049ac576/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/everton/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/9e61a4623e942f1179787274049ac576/AndroidManifest.xml:9:5-20
 	android:supportsRtl
@@ -55,23 +55,25 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/evert
 	android:theme
 		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:11:9-40
 activity#everton.m.relogiopartilha.MainActivity
-ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:12:9-21:20
+ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:12:9-22:20
+	android:screenOrientation
+		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:15:13-49
 	android:label
 		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:14:13-45
 	android:theme
-		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:15:13-56
+		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:16:13-56
 	android:name
 		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:13:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:16:13-20:29
+ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:17:17-69
+ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:17:25-66
+		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:19:17-77
+ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:19:27-74
+		ADDED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml:20:27-74
 uses-sdk
 INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/src/main/AndroidManifest.xml
