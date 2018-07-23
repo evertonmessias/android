@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Mon Jul 23 00:21:31 BRT 2018
+#Mon Jul 23 06:32:22 BRT 2018
 0.baseType=DIRECTORY
-0.base=/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/build/intermediates/transforms/dexMerger/debug/31
+0.base=/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/build/intermediates/transforms/dexMerger/debug/47
 0.path=classes.dex
 0.set=DEX
 count=1

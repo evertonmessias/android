@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     EditText tempo;
     TextView visor,obs;
     int minutos;
-    Contador timer;
+    Contador timer = null;
     MediaPlayer somatencao,somfim;
     boolean iniciado = false;
 
@@ -38,11 +38,6 @@ public class MainActivity extends AppCompatActivity {
         if (!iniciado){
 
             iniciado = true;
-
-            somfim = MediaPlayer.create(this, R.raw.fim);
-            somatencao = MediaPlayer.create(this, R.raw.atencao);
-
-            tela = findViewById(R.id.tela);
             tempo = findViewById(R.id.tempo);
             visor = findViewById(R.id.visor);
             obs = findViewById(R.id.obs);
@@ -53,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
 
                 if (minutos >= 1 && minutos <= 30) {
 
+                    somfim = MediaPlayer.create(this, R.raw.fim);
+                    somatencao = MediaPlayer.create(this, R.raw.atencao);
+                    tela = findViewById(R.id.tela);
+
                     minutos = minutos + 1;
                     tela.setBackgroundColor(Color.rgb(0, 255, 0));
                     obs.setText("*** PARTILHANDO ***");
@@ -60,10 +59,10 @@ public class MainActivity extends AppCompatActivity {
                     timer.start();
 
                 } else {
-                    visor.setText("ERRO");iniciado = false;
+                    visor.setText("ERRO");
                 }
             } else {
-                visor.setText("??:??");iniciado = false;
+                visor.setText("??:??");
             }
 
         }
@@ -72,13 +71,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void parar(View view){
         escondeTeclado();
-        iniciado = false;
-        if(timer != null){
-            timer.cancel();
-            timer = null;
-            tela.setBackgroundColor(Color.rgb(255,255,255));
-            somatencao.release();somfim.release();
-        }visor.setText("00:00");obs.setText("(Tempo de Partilha + 1 min)");onRestart();
+        if(iniciado){
+            iniciado = false;
+            if (timer != null) {
+                timer.cancel();timer = null;
+                tela.setBackgroundColor(Color.rgb(255,255,255));
+                somatencao.release();somfim.release();
+            }
+            visor.setText("00:00");obs.setText("(Tempo de Partilha + 1 min)");
+        }
+        onRestart();
     }
 
     @Override
@@ -99,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            if (timer != null) {timer.cancel();somatencao.release();somfim.release();}
             finish();
             return true;
         }
