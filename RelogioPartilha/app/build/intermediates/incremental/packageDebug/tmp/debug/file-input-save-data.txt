@@ -1,0 +1,15 @@
+#Internal package file, do not edit.
+#Sun Jul 22 22:53:34 BRT 2018
+1.base=/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/build/intermediates/transforms/dexMerger/debug/27
+2.path=classes.dex
+0.baseType=DIRECTORY
+2.base=/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/build/intermediates/transforms/dexMerger/debug/28
+2.set=DEX
+1.baseType=DIRECTORY
+count=3
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/RelogioPartilha/app/build/intermediates/transforms/dexMerger/debug/29
+2.baseType=DIRECTORY
+1.path=classes.dex

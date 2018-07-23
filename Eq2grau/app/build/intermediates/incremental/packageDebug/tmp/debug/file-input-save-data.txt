@@ -1,7 +1,11 @@
 #Internal package file, do not edit.
-#Sat Apr 07 14:33:37 BRT 2018
+#Sat Jul 21 18:20:07 BRT 2018
+1.base=/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/transforms/dexMerger/debug/11
 0.baseType=DIRECTORY
-0.base=/home/everton/programacao/android/Eq2grau/app/build/intermediates/transforms/dexMerger/debug/14
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
 0.path=classes.dex
 0.set=DEX
-count=1
+0.base=/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/transforms/dexMerger/debug/12
+1.path=classes.dex

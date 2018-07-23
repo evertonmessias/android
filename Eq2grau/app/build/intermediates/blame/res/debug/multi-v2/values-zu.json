@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/everton/programacao/android/Eq2grau/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zu/values-zu.xml",
+            "outputFile": "/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zu/values-zu.xml",
             "map": [
                 {
-                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/31d97f9724ea6a16b3faf900f4f53dfd/res/values-zu/values-zu.xml",
+                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d3ed0fe815b1f730e9971e282e809b92/res/values-zu/values-zu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

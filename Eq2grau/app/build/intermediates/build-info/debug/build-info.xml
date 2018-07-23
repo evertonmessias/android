@@ -6,31 +6,79 @@
     density="xhdpi"
     format="10"
     plugin-version="3.1.0"
-    timestamp="1523115433685"
+    timestamp="1532267090988"
     token="2352689839130197752"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="4890" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="566" />
+        duration="0" />
     <task
         name="verifier"
-        duration="62" />
+        duration="0" />
 
     <artifact
+        location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
+    <artifact
         location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
         location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
     <artifact
-        location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
     <artifact
         location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -39,39 +87,72 @@
         location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
     <artifact
-        location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-        type="SPLIT_MAIN" />
-    <artifact
-        location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
-    <artifact
         location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
-        location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
+        location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1523115433685"
+        timestamp="1532267090988"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
+            location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
             location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
             location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -80,26 +161,11 @@
             location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-        <artifact
-            location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
             location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/home/everton/programacao/android/Eq2grau/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
+            location="/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

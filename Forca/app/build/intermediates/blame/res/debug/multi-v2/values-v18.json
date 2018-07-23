@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/everton/programacao/android/Forca/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
+            "outputFile": "/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Forca/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/31d97f9724ea6a16b3faf900f4f53dfd/res/values-v18/values-v18.xml",
+                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/ba772e23695b10a094aa7d97afb2bf7a/res/values-v18/values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
