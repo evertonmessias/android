@@ -1,7 +1,4 @@
-#Sat Jul 21 18:20:06 BRT 2018
-base.0=/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/transforms/dexMerger/debug/11
-path.1=classes.dex
-renamed.1=classes2.dex
+#Fri Aug 03 22:36:11 BRT 2018
+base.0=/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/transforms/dexMerger/debug/16
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/transforms/dexMerger/debug/12

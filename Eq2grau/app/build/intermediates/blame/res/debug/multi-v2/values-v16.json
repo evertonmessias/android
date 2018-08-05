@@ -4,7 +4,7 @@
             "outputFile": "/mnt/bkp/MEGA/everton/01 - TESTES/programacao/android/Eq2grau/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d3ed0fe815b1f730e9971e282e809b92/res/values-v16/values-v16.xml",
+                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/ba772e23695b10a094aa7d97afb2bf7a/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/b0023d5513c0f30e200e38fb12e260c7/res/values-v16/values-v16.xml",
+                    "source": "/home/everton/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/f97e2acdd173fe558c41b93d528aa0b9/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

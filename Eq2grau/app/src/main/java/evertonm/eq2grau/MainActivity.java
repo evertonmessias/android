@@ -1,8 +1,10 @@
 package evertonm.eq2grau;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import static java.lang.Math.pow;
@@ -41,9 +43,18 @@ public class MainActivity extends AppCompatActivity {
             case 1:return "Não Existem Raizes Reais!";
             default:return escrever();}}
 
-    // ------------------------------BOTÕES-----------------------------------------
+    public void escondeTeclado(){
+        InputMethodManager inputManager = (InputMethodManager)
+                getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
+    }
+
+
+            // ------------------------------BOTÕES-----------------------------------------
 
     public void clique1(View view) {
+        escondeTeclado();
         // tipo variavel = metodo de captura
         EditText va = findViewById(R.id.va);
         EditText vb = findViewById(R.id.vb);
@@ -67,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         } else {resposta.setText("Digite os Valores!");}}
 
     public void clique2(View view) {
+        escondeTeclado();
         onRestart();
         EditText va = findViewById(R.id.va);
         EditText vb = findViewById(R.id.vb);

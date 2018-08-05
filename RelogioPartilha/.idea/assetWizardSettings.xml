@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="foregroundImage" value="$USER_HOME$/Imagens/ic_launcher-web.png" />
+                                      <entry key="foregroundImage" value="$PROJECT_DIR$/app/src/main/ic_launcher-web.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
